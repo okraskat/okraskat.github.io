@@ -1,6 +1,6 @@
 ---
-title: Okraskat.Github.Io
-timezone: UTC
+title: Tomasz Okraska blog
+timezone: Europe/Warsaw
 collections:
   posts:
     title: Posts
@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 name: Tomasz Okraska
-description: Everyday adveantures with coding
+description: Everyday adventures with coding
 avatar: 
 footer-links:
   dribbble: 
