@@ -133,6 +133,8 @@ private static void closeDatabaseConnection(Connection connection) {
 }
 {% endhighlight %}
 
+You can find source code in my Github repository [how-to](https://github.com/okraskat/how-to) under jdbc directory.
+
 Hope you enjoy this post about starting working with JDBC. If You have any questions or problems leave comment or mail to me.
 
 See You soon!
