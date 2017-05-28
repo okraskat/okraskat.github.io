@@ -1,6 +1,6 @@
 ---
 title: Starting blog!
-date: 2017-05-28 00:00:00 Z
+date: 2017-05-28 02:00:00 +02:00
 layout: post
 ---
 
