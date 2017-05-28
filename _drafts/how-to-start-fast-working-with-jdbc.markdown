@@ -7,7 +7,7 @@ tags:
 - h2
 ---
 
-Many people, at the beginning of their adventure with software development, are scared how many things and tools they have to learn. This is example how to start fast working with JDBC (for more information please go [here](http://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)).
+Many people, at the beginning of their adventure with software development, are scared how many things and tools they have to learn. This is example how to start fast working with JDBC (for more information please go [here](http://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)). There is no need to install any database engine - we will use simple [H2 database](http://www.h2database.com/html/main.html).
 
 First step - download H2 database driver from [here](https://mvnrepository.com/artifact/com.h2database/h2).
 
