@@ -1,7 +1,7 @@
 ---
-layout: page
 title: About
-permalink: /about/
+permalink: "/about/"
+layout: page
 ---
 
 My name is Tomasz Okraska. I'm fullstack developer working with Java and JavaScript code.
