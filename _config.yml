@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 name: Tomasz Okraska
-description: Everyday not obvious adveantures with coding
+description: Everyday adveantures with coding
 avatar: 
 footer-links:
   dribbble: 
@@ -28,7 +28,7 @@ footer-links:
 disqus: okraskat-github-io
 google_analytics: 
 url: https://okraskat.github.io
-baseurl: ''
+baseurl: 
 permalink: "/:title/"
 version: v1.2.0
 kramdown:
@@ -37,7 +37,7 @@ kramdown:
   syntax_highlighter_opts:
     css_class: highlight
 sass:
-  style: :expanded
+  style: expanded
 gems:
 - jekyll-sitemap
 - jekyll-feed
