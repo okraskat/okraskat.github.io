@@ -1,6 +1,9 @@
 ---
 title: Angular 1.5 - scope data binding
 date: 2017-06-11 16:47:00 +02:00
+tags:
+- java script
+- angular
 ---
 
 This week the QA reported an issue. It was about not downloading file, when a download button was clicked. We use Angular 1.5 to develop frontend of our application.
