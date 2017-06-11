@@ -15,9 +15,9 @@ In Angular you need remember that there are several ways to pass attributes to d
 Based on git log, when this directive was created all attributes where passed as strings, a scope of this directive looked like:
 
 {% highlight javascript %}
-    scope: {
-        downloadUrlAttribute: '@'
-    }
+scope: {
+    downloadUrlAttribute: '@'
+}
 {% endhighlight %}
 where '@' means that you pass attribute as string, because DOM elements are strings.
 It creates one way binding from parent controller to the child one.
@@ -29,7 +29,9 @@ named downloadUrl which should contains link to pdf to download. As I mentioned 
 
 When you pass attribute to directive as a string, you need to remember to interpolate these attribute so it should look like:
 {% highlight html %}
+{% raw %}
 <download-button download-url-attribute="{{downloadUrl}}"></download-button>
+{% endraw %}
 {% endhighlight %}
 
 When you change binding to bidirectional, you should pass object to the directive, so you should remove string interpolation and following code should look like:
