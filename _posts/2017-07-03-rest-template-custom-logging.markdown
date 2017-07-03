@@ -138,8 +138,8 @@ We need to include in out pom logging starter, with this dependency we can confi
 {% highlight XML %}
 <dependency>
     <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-logging</artifactId>
-    </dependency>
+    <artifactId>spring-boot-starter-logging</artifactId>
+</dependency>
 {% endhighlight %}
 
 By default Spring Boot uses Logback as logging framework. In src/main/resources directory we need to create logback-spring.xml file which will be automaticly discovered by Spring Boot.
