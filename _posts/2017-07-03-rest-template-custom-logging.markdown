@@ -133,3 +133,60 @@ We create postForEntity method which is annotated with @PostConstruct annotation
 Ok, but how to see HTTP communication data which is transfered in this example?
 
 We need to include in out pom logging starter, with this dependency we can configure our logging.
+
+{% highlight %}
+{% raw %}
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-logging</artifactId>
+</dependency>
+{% endraw %}
+{% endhighlight %}
+
+By default Spring Boot uses Logback as logging framework. In src/main/resources directory we need to create logback-spring.xml file which will be automaticly discovered by Spring Boot.
+
+This file looks like:
+
+{% highlight XML %}
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProfile name="develop">
+        <logger name="io.okraskat.resttemplate.CustomClientHttpRequestInterceptor" level="TRACE"/>
+    </springProfile>
+    <springProfile name="uat">
+        <logger name="io.okraskat.resttemplate.CustomClientHttpRequestInterceptor" level="DEBUG"/>
+    </springProfile>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="ROOT" level="INFO"/>
+</configuration>
+{% endhighlight %}
+
+Now is the time to explain for what we included line:
+
+{% highlight java %}
+spring.profiles.active=develop
+{% endhighlight %}
+
+in application.properties file. With Spring we can manipulate logging configuration using Spring profiles. Including them in application.properties file is the easiest way to start working with profiles. They can be also passed as a environment variable during our JVM start.
+
+As we can see in logback configuration file, we have two different configurations for CustomClientHttpRequestInterceptor LOGGER. For example, when you developing application and you need to see full HTTP communication logs you can enable TRACE log level with develop profile. But if your application is tested by users you can enable uat (user acceptance tests) profile to limit logs only for more important informations (you are free to choice profile names). In production environment your logs would not be visible if you not specify any profile, because default logging level is INFO.
+
+Let's start our application with IDE or with maven by typing:
+{% highlight java %}
+mvn spring-boot:run
+{% endhighlight %}
+
+We can see full HTTP communication logs on standard output. Let's change active spring profiles to:
+{% highlight java %}
+spring.profiles.active=uat
+{% endhighlight %}
+
+Now you can see that log output is limited.
+
+In logback-spring.xml you can include external or custom files with logging configuration for specified profile. It's not limited for single logger. For more details please visit [Spring logging reference](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html) and  [Logback site](https://logback.qos.ch/manual/).
+
+You can find source code in my Github repository [how-to](https://github.com/okraskat/how-to) under restemplate directory.
+
+Hope you enjoy this post. It shows few Spring features, which you can use in your projects. If You have any questions or problems leave comment or mail to me.
+
+See You soon!
