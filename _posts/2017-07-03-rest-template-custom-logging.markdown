@@ -122,3 +122,14 @@ private final String serviceUrl;
 As earlier, we register Spring bean, then we can use Spring Dependency Injection to inject dependencies into our bean. The first dependency is RestTemplate defined in Application config. Second one is serviceUrl which is provided in application.properties file.
 
 Let's see this file:
+
+{% highlight %}
+spring.profiles.active=develop
+service.url=http://jsonplaceholder.typicode.com
+{% endhighlight %}
+
+We create postForEntity method which is annotated with @PostConstruct annotation. It means that this method will be fired just after bean creation. In our metohd we provide some data to exchange, create requestUrl and exchange data with RestTemplate.
+
+Ok, but how to see HTTP communication data which is transfered in this example?
+
+We need to include in out pom logging starter, with this dependency we can configure our logging.
