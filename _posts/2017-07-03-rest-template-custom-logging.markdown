@@ -123,7 +123,7 @@ As earlier, we register Spring bean, then we can use Spring Dependency Injection
 
 Let's see this file:
 
-{% highlight %}
+{% highlight java %}
 spring.profiles.active=develop
 service.url=http://jsonplaceholder.typicode.com
 {% endhighlight %}
