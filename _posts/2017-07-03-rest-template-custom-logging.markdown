@@ -136,10 +136,12 @@ Ok, but how to see HTTP communication data which is transfered in this example?
 We need to include in out pom logging starter, with this dependency we can configure our logging.
 
 {% highlight %}
+{% raw %}
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-logging</artifactId>
 </dependency>
+{% endraw %}
 {% endhighlight %}
 
 By default Spring Boot uses Logback as logging framework. In src/main/resources directory we need to create logback-spring.xml file which will be automaticly discovered by Spring Boot.
@@ -147,6 +149,7 @@ By default Spring Boot uses Logback as logging framework. In src/main/resources 
 This file looks like:
 
 {% highlight %}
+{% raw %}
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <springProfile name="develop">
@@ -158,6 +161,7 @@ This file looks like:
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <logger name="ROOT" level="INFO"/>
 </configuration>
+{% endraw %}
 {% endhighlight %}
 
 Now is the time to explain for what we included line:
