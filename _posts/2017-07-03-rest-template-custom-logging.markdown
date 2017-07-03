@@ -134,34 +134,6 @@ Ok, but how to see HTTP communication data which is transfered in this example?
 
 We need to include in out pom logging starter, with this dependency we can configure our logging.
 
-{% highlight %}
-{% raw %}
-<dependency>
-<groupId>org.springframework.boot</groupId>
-<artifactId>spring-boot-starter-logging</artifactId>
-</dependency>
-{% endraw %}
-{% endhighlight %}
-
-By default Spring Boot uses Logback as logging framework. In src/main/resources directory we need to create logback-spring.xml file which will be automaticly discovered by Spring Boot.
-
-This file looks like:
-
-{% highlight java %}
-{% raw %}
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <springProfile name="develop">
-        <logger name="io.okraskat.resttemplate.CustomClientHttpRequestInterceptor" level="TRACE"/>
-    </springProfile>
-    <springProfile name="uat">
-        <logger name="io.okraskat.resttemplate.CustomClientHttpRequestInterceptor" level="DEBUG"/>
-    </springProfile>
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
-    <logger name="ROOT" level="INFO"/>
-</configuration>
-{% endraw %}
-{% endhighlight %}
 
 Now is the time to explain for what we included line:
 
@@ -175,9 +147,7 @@ As we can see in logback configuration file, we have two different configuration
 
 Let's start our application with IDE or with maven by typing:
 {% highlight java %}
-{% raw %}
 mvn spring-boot:run
-{% endraw %}
 {% endhighlight %}
 
 We can see full HTTP communication logs on standard output. Let's change active spring profiles to:
