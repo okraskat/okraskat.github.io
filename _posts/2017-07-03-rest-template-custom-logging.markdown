@@ -147,7 +147,8 @@ By default Spring Boot uses Logback as logging framework. In src/main/resources 
 
 This file looks like:
 
-{% highlight XML %}
+{% highlight java %}
+{% raw %}
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <springProfile name="develop">
@@ -159,6 +160,7 @@ This file looks like:
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <logger name="ROOT" level="INFO"/>
 </configuration>
+{% endraw %}
 {% endhighlight %}
 
 Now is the time to explain for what we included line:
@@ -173,7 +175,9 @@ As we can see in logback configuration file, we have two different configuration
 
 Let's start our application with IDE or with maven by typing:
 {% highlight java %}
+{% raw %}
 mvn spring-boot:run
+{% endraw %}
 {% endhighlight %}
 
 We can see full HTTP communication logs on standard output. Let's change active spring profiles to:
