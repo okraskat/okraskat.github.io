@@ -135,6 +135,31 @@ Ok, but how to see HTTP communication data which is transfered in this example?
 We need to include in out pom logging starter, with this dependency we can configure our logging.
 
 
+{% highlight XML %}
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-logging</artifactId>
+    </dependency>
+{% endhighlight %}
+
+By default Spring Boot uses Logback as logging framework. In src/main/resources directory we need to create logback-spring.xml file which will be automaticly discovered by Spring Boot.
+
+This file looks like:
+
+{% highlight XML %}
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProfile name="develop">
+        <logger name="io.okraskat.resttemplate.CustomClientHttpRequestInterceptor" level="TRACE"/>
+    </springProfile>
+    <springProfile name="uat">
+        <logger name="io.okraskat.resttemplate.CustomClientHttpRequestInterceptor" level="DEBUG"/>
+    </springProfile>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="ROOT" level="INFO"/>
+</configuration>
+{% endhighlight %}
+
 Now is the time to explain for what we included line:
 
 {% highlight java %}
