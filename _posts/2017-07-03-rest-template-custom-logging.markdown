@@ -85,7 +85,7 @@ private static final Logger LOGGER = LoggerFactory.getLogger(CustomClientHttpReq
 }
 {% endhighlight %}
 
-Ok, but we need have some rest HTTP service to exchange data. For this example we will use [http://jsonplaceholder.typicode.com] (http://jsonplaceholder.typicode.com) which is free rest api for testing and education purposes.
+Ok, but we need have some rest HTTP service to exchange data. For this example we will use [jsonplaceholder](http://jsonplaceholder.typicode.com) which is free rest api for testing and education purposes.
 
 Let's define our SimpleHttpClient
 
