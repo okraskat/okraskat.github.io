@@ -15,16 +15,17 @@ To format numbers in Java we should use String.format method, which arguments ar
 - Locale instance
 - specified string format
 - arguments to format (array of objects)
+
 we also can use method with default Locale.
 
 In one of projects that I'm working on, there was a method:
 {% highlight java %}
- private static String formatDoubleNumber(Object argument) {
+private static String formatDoubleNumber(Object argument) {
     return String.format("Number: %.4f", argument);
 }
 {% endhighlight %}
 
-This is simple method to format double number with 4 digits after separator. But, as you can see, argument is an object, which allows you to pass both, integer and double numbers. If argument is a integer instance the IllegalFormatConversionException will be thrown. But why? The first thought is that, Java should also format integer with additional zeros at the end. It's not so obvious.
+This is a simple method to format double number with 4 digits after separator. But, as you can see, argument is an object, which allows you to pass both, integer and double numbers. If argument is an integer instance the IllegalFormatConversionException will be thrown. But why? The first thought is that, Java should also format integer with additional zeros at the end. It's not so obvious.
 If you look deeper in String class, it uses java.util.Formatter class to format strings. In this class there is a method to print float numbers (which was our target). Let see implementation of this method:
 
 {% highlight java %}
@@ -55,7 +56,7 @@ private static String formatDoubleNumber(Object argument) {
 }
 {% endhighlight %}
 
-Firstly we should check that given argument is instanceof Number, which is abstract class with doubleValue() method. If we sure, that passed argument is Number, then we can cast this object and call doubleValue method.
+Firstly we need tocheck that given argument is instance of java.lang.Number, which is a abstract class with doubleValue() method. If we sure, that passed argument is Number, then we can cast this object and call doubleValue method.
 
 This implementation allows us to pass instances of all number data types in Java: Byte, Short, Integer, Long, Float, Double and BigDecimal.
 
