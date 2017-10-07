@@ -38,9 +38,12 @@ kramdown:
     css_class: highlight
 sass:
   style: :expanded
+bootstrap:
+  assets: true
 gems:
 - jekyll-sitemap
 - jekyll-feed
+- jekyll-bootstrap-sass
 exclude:
 - Gemfile
 - Gemfile.lock
