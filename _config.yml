@@ -37,13 +37,10 @@ kramdown:
   syntax_highlighter_opts:
     css_class: highlight
 sass:
-  style: :expanded
-bootstrap:
-  assets: true
+  style: :compressed
 gems:
 - jekyll-sitemap
 - jekyll-feed
-- jekyll-bootstrap-sass
 exclude:
 - Gemfile
 - Gemfile.lock

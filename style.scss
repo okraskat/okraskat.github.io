@@ -7,7 +7,7 @@
 
 @import "reset";
 @import "variables";
-@import "bootstrap";
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -287,6 +287,11 @@ footer {
 .center-image {
     margin: 0 auto;
     display: block;
+}
+
+.isa_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
