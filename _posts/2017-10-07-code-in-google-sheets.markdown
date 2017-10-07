@@ -1,6 +1,8 @@
 ---
 title: Code in Google Sheets
 date: 2017-10-07 13:34:00 +02:00
+tags:
+- JavaScript
 ---
 
 Do you know that Google Sheets offers scripting?
