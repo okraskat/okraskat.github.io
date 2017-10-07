@@ -1,6 +1,6 @@
 ---
 title: Code in Google Sheets
-date: 2017-10-07 13:34:00 +02:00
+date: 2017-10-07 11:34:00 Z
 tags:
 - JavaScript
 ---
@@ -46,7 +46,7 @@ function sendEmail() {
 }
 {% endhighlight %}
 Emails will be send from our gmail account.
-{% include callout.html content="Remember that you script can only send 100 emails per day, if you need more you need to have Google business account" type="warning" %}
+{% include warning.html content="Remember that you script can only send 100 emails per day, if you need more you need to have Google business account" %}
 
 In your scripts you can use all JavaScript features.
 In my opinion - it's very important that we don't need to learn another syntax - just code!
