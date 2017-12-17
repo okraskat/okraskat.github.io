@@ -15,8 +15,8 @@ private void jButton_printButtonActionPerformed(java.awt.event.ActionEvent evt) 
     MessageFormat footer = new MessageFormat("Page {0,number,integer}");
     try {
         PrinterJob printerJob = PrinterJob.getPrinterJob();
-        printerJob.printerJob(new JTablePrintableWrapper(yourJTable.getPrintable(JTable.PrintMode.FIT_WIDTH, header, footer)), printerJob .defaultPage());
-        printerJob .print();
+        printerJob.printerJob(new JTablePrintableWrapper(yourJTable.getPrintable(JTable.PrintMode.FIT_WIDTH, header, footer)), printerJob.defaultPage());
+        printerJob.print();
     } catch (Exception e) {
        System.err.format("Error during print JTable data");
        e.printStackTrace();
@@ -27,31 +27,28 @@ private void jButton_printButtonActionPerformed(java.awt.event.ActionEvent evt) 
 The tricky part is to implement JTablePrintableWrapper.
 
 {% highlight java %}
-    public class JTablePrintableWrapper implements Printable {
+public class JTablePrintableWrapper implements Printable {
+    private final Printable jTablePrintable;
 
-        Font font = new Font("SansSerif", Font.PLAIN, 12);
-        private final Printable jTablePrintable;
-
-        public JTablePrintableWrapper(Printable jTablePrintable) {
-            this.jTablePrintable= jTablePrintable;
-        }
-
-        @Override
-        public int print(Graphics g, PageFormat pf, int pageIndex)
-                throws PrinterException {
-
-            if (pageIndex == 0) {
-                Graphics2D g2d = (Graphics2D) g;
-                //this is a place where you can print what you want using Graphics2D object
-                // after this you should remember to correct translate Graphics2D
-                // to the place where you finished you custom text
-                // it's necessary to print data below your text
-                g.translate(0, Y_COORDINATE_WHERE_YOU_FINISHED_PRINTING);
-            }
-            // this is place where you print your data from JTable
-            return jTablePrintable.print(g, pf, pageIndex);
-        }
+    public JTablePrintableWrapper(Printable jTablePrintable) {
+        this.jTablePrintable= jTablePrintable;
     }
+
+    @Override
+    public int print(Graphics g, PageFormat pf, int pageIndex) throws PrinterException {
+
+       if (pageIndex == 0) {
+           Graphics2D g2d = (Graphics2D) g;
+           //this is a place where you can print what you want using Graphics2D object
+           // after this you should remember to correct translate Graphics2D
+           // to the place where you finished you custom text
+           // it's necessary to print data below your text
+           g.translate(0, Y_COORDINATE_WHERE_YOU_FINISHED_PRINTING);
+        }
+        // this is place where you print your data from JTable
+        return jTablePrintable.print(g, pf, pageIndex);
+    }
+}
 {% endhighlight %}
 
 Hope you enjoy this post. If You have any questions or problems leave a comment or send email.
