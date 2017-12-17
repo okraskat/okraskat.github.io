@@ -1,6 +1,12 @@
 ---
 title: How to add text over JTable print?
 date: 2017-12-17 14:45:00 Z
+categories:
+- java
+tags:
+- java
+- JTable
+- pdf
 ---
 
 During work on one of my last projects I faced to problem, how to add text over JTable print? I couldn't find any solution which would suit to my case. After several hours of trying another approaches I found easy way how to add text over JTable print. Let's see how to do this!
