@@ -26,9 +26,9 @@ Let's go to the things which I liked in some interviews. Some companies have rec
 
 ASK ABOUT SOLVING CODING TASKS IN HOME, NOT DURING INTERVIEW
 
-Another practice which I never met but I liked from the first time, is to show candidate his feature office, his desk and tools. It's also great opportunity to meet feature teammates. The fourth thought is:
+Another practice which I never met but I liked from the first time, is to show candidate his future office, his desk and tools. It's also great opportunity to meet future teammates. The fourth thought is:
 
-SHOW CANDIDATE HIS FEATURE OFFICE AND LET HIM TALK TO THE TEAM
+SHOW CANDIDATE HIS FUTURE OFFICE AND LET HIM TALK TO THE TEAM
 
 Those are my thoughts about recruitment from candidate perspective.
 Maybe some interviewers will change their methods and some candidates will feel more comfortable during interviews.
