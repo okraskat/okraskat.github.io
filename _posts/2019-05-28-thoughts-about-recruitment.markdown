@@ -8,11 +8,11 @@ tags:
 - hr
 ---
 
-In may I faced some non typical situation.
+In May I faced some non typical situation.
 My new customer canceled our contract before it started.
 I was left without any project. Initially I was disappointed and angry about this situation, but it's no good crying over spilt milk :)
 
-I started to looking for new opportunities, I had a lot of interview calls and meetings. I want to share with You my thoughts how hiring Java Developers looks in Poland.
+I started to looking for new opportunities, I had a lot of interview calls and meetings. I want to share with you my thoughts how hiring Java Developers looks in Poland.
 
 Firstly I want to describe what I dislike in recruitment. The worst interview call I had with one of bigger outsourcing companies. It took more than hour, interviewer had a long list of theoretical questions about Java and working in Scrum methodology. After exhausting answering these questions I had chance to ask him about company and about project where I would work. He couldn't answer any of my question. All answers where like "It's depends on project, team" and he barely knows where I would work in their company. So the first thougth is:
 
@@ -33,4 +33,4 @@ SHOW CANDIDATE HIS FUTURE OFFICE AND LET HIM TALK TO THE TEAM
 Those are my thoughts about recruitment from candidate perspective.
 Maybe some interviewers will change their methods and some candidates will feel more comfortable during interviews.
 
-Hope you enjoy this post. If You have any questions or problems leave a comment or send email.
+Hope you enjoy this post. If you have any questions or problems leave a comment or send email.
