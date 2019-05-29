@@ -10,11 +10,11 @@ tags:
 
 In May I ended up in an unusual situation.
 A new customer canceled a contract before it actually started.
-I was left with no project. At fist, it was disappointing. I was angry about the situation, but it's no good crying over spilt milk :)
+I was left with no project. At first, it was disappointing. I was angry about the situation, but it's no good crying over spilt milk :)
 
 I began to look for new opportunities. Interviews and calls with potential employers kept me busy for over a month. Here, I want to share with you my thoughts on how does Java Developer hiring process look like in Poland.
 
-Firstly I want to describe what I dislike in recruitment. The worst interview call I had with one of bigger outsourcing companies. It took more than hour, interviewer had a long list of theoretical questions about Java and working in Scrum methodology. After exhausting answering these questions I had chance to ask him about company and about project where I would work. He couldn't answer any of my question. All answers where like "It's depends on project, team" and he barely knows where I would work in their company. So the first thougth is:
+Firstly I want to describe what I dislike in recruitment. The worst interview call I had with one of bigger outsourcing companies. It took more than hour, interviewer had a long list of theoretical questions about Java and working in Scrum methodology. After exhausting answering these questions I had chance to ask him about company and about project where I would work. He couldn't answer any of my question. All answers where like "It's depends on project, team" and he barely knows where I would work in their company. So the first thought is:
 
 DO NOT TRY TO PROOF CANDIDATE HIS LACK OF KNOWLEDGE IF YOU CAN NOT ANSWER ANY OF CANDIDATE QUESTION
 
