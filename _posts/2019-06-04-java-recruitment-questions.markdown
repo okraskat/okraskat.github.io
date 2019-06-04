@@ -10,7 +10,7 @@ tags:
 - hr
 ---
 
-My previews post was about recruitment practices [read here](https://okraskat.github.io/thoughts-about-recruitment/).
+My previous post was about recruitment practices [read here](https://okraskat.github.io/thoughts-about-recruitment/).
 Today I want to share with you a list of Java interview questions which were asked me.
 
 Even if you are senior developer you need to be prepared to answer questions about:
@@ -36,7 +36,7 @@ Senior developers must be prepared to answer more advanced questions like:
 - explain Java memory management model
 - how garbage collector works
 - can garbage collector delete object with reference (tricky question about circular reference in non used objects)
-- list know JVM flags and their meaning
+- list known JVM flags and their meaning
 
 After pure Java questions it was time to check knowledge about popular frameworks:
 SPRING AND HIBERNATE
@@ -57,10 +57,10 @@ Nowadays developers are not only programming, they also work with application se
 Recruiters asked me about my knowledge of Jenkins, Bamboo and other similar tools.
 Version control systems like Git where also topic of some questions.
 
-Some recruiters have prepared questions about good coding practices and design patterns - but it was not a rule.
+Some recruiters had prepared questions about good coding practices and design patterns - but it was not a rule.
 
-I noticed that technical recruiters in bigger companies have strict list of interview questions.
-Recruiters in smaller companies where more flexible and they tried to fit questions to my preview projects and used technologies.
+I noticed that technical recruiters in bigger companies had strict list of interview questions.
+Recruiters in smaller companies where more flexible and they tried to fit questions to my previous projects and used technologies.
 
 In next post I will list questions asked by me to the recruiters :)
 
