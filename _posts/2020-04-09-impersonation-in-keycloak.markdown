@@ -1,6 +1,10 @@
 ---
 title: Impersonation in Keycloak
 date: 2020-04-09 13:49:00 Z
+categories:
+- keycloak
+tags:
+- impersonation
 ---
 
 I had to implement user impersonation using Keycloak. I haven't found any e2e solution so I decided to write short post about how we can achieve that.
@@ -11,11 +15,16 @@ First you need to start your Keycloak instance with these flags:
 {% endhighlight %}
 
 It's allow us to use token exchange feature which is not enabled by default.
+Then we need to enable impersonation for our client in Keycloak console.
 
+![client.png](/uploads/client.png)
 
+After that we need to grant impersonation for specified user:
+![user.png](/uploads/user.png)
 
+When we have configuration part done, we can move forward to implementation which is not much complex.
 
-This is implementation of TypeScript service used in my Angular app for token exchange.
+This is implementation of TypeScript service used in my Angular app for a token exchange.
 
 {% highlight ts %}
 export class ImpersonateService {
@@ -63,11 +72,7 @@ export class ImpersonateService {
 }
 {% endhighlight %}
 
-
-
-
-
-
+In response from Keyclok you should received new tokens pair.
 
 
 Hope you enjoy this post. If You have any questions or problems leave a comment or send email.
