@@ -53,6 +53,49 @@ class EntityTest extends Specification {
 }
 {% endhighlight %}
 
+If you prefer injecting values, your entity will look like this:
+{% highlight java %}
+class Entity {
+    private final Clock clock;
+
+    private LocalDateTime updatedAt;
+    private LocalDateTime expiresAt;
+
+    Entity(Clock clock) {
+        this.clock = clock;
+        this.expiresAt = LocalDateTime.now(clock).plusMonths(1);
+    }
+
+    void update() {
+        this.updatedAt = LocalDateTime.now(clock);
+    }
+}
+{% endhighlight %}
+
+Now test would look like:
+{% highlight groovy %}
+class EntityTest extends Specification {
+
+    def "should set proper dates"() {
+        given:
+        def fixedDateTime = LocalDateTime.of(2020, Month.AUGUST, 12, 10, 0)
+        def clock = Clock.fixed(fixedDateTime.atZone(ZoneId.systemDefault()).toInstant(), ZoneId.systemDefault())
+
+        when:
+        def entity = new Entity(clock)
+
+        then:
+        entity.expiresAt == LocalDateTime.of(2020, Month.SEPTEMBER, 12, 10, 0)
+
+        and:
+        entity.update()
+
+        then:
+        entity.updatedAt == fixedDateTime
+    }
+}
+{% endhighlight %}
+
 I think, that this is a simple way to test time operations in our classes without any specific classes, using only JDK.
 
 Hope you enjoy this post. If You have any questions or problems leave a comment or send email.
