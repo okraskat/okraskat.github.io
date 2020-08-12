@@ -4,7 +4,7 @@ date: 2020-08-12 09:56:00 Z
 ---
 
 Recently I read article about testing time in Java (written in Polish):
-https://sztukakodu.pl/jak-madrze-testowac-czas-w-javie/
+[link](https://sztukakodu.pl/jak-madrze-testowac-czas-w-javie/)
 
 I think that, it's worth to prefer usage of classes provided by JDK, than creating special interfaces. I would like to present you, my approach for testing time in Java.
 
