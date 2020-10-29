@@ -63,6 +63,15 @@ class WebSocketAudit {
 }
 {% endhighlight %}
 
+If you can't connect via JMX to your JVM or you have limited access to server, you can log current number of opened files and configured maximum count of file descriptors.
+{% highlight java %}
+OperatingSystemMXBean os = ManagementFactory.getOperatingSystemMXBean();
+if (os instanceof UnixOperatingSystemMXBean) {
+    log.info("Number of opened files: " + ((UnixOperatingSystemMXBean) os).getOpenFileDescriptorCount());
+    log.info("Max of opened files: " + ((UnixOperatingSystemMXBean) os).getMaxFileDescriptorCount());
+}
+{% endhighlight %}
+
 Hope you enjoy this post and it will be helpful for you. If you have any questions or problems leave a comment or send email.
 
 See You soon!
