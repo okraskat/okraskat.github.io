@@ -13,21 +13,21 @@ By default, Linux systems limit the number of file descriptors that anyone proce
 If you want to control and close WebSocket connections from server side, just follow this steps. Firstly in your WebSocketMessageBrokerConfigurer implementation decorate WebSocketHandler with example sessionHandler.
 
 {% highlight java %}
-    @Override
-    public void configureWebSocketTransport(WebSocketTransportRegistration registry) {
-        registry.addDecoratorFactory(new WebSocketHandlerDecoratorFactory() {
-            @Override
-            public WebSocketHandler decorate(WebSocketHandler handler) {
-                    return new WebSocketHandlerDecorator(handler) {
-                        @Override
-                        public void afterConnectionEstablished(final WebSocketSession session) throws Exception {
-                            super.afterConnectionEstablished(session);
-                            sessionHandler.register(session);
-                        }
-                    };
-            }
-        });
-    }
+@Override
+public void configureWebSocketTransport(WebSocketTransportRegistration registry) {
+    registry.addDecoratorFactory(new WebSocketHandlerDecoratorFactory() {
+        @Override
+        public WebSocketHandler decorate(WebSocketHandler handler) {
+                return new WebSocketHandlerDecorator(handler) {
+                    @Override
+                    public void afterConnectionEstablished(final WebSocketSession session) throws Exception {
+                        super.afterConnectionEstablished(session);
+                        sessionHandler.register(session);
+                    }
+                };
+        }
+    });
+}
 {% endhighlight %}
 
 Let's see how example WebSocketSessionHandler can look like:
@@ -47,11 +47,11 @@ Now we have references to WebSocket sessions, so we can close them when we want.
 You can schedule removing old sessions or implement any other logic which suites your needs.
 
 {% highlight java %}
-    try {
-        session.close();
-    } catch (IOException e) {
-        log.error("Error while closing websocket session " + sessionId, e);
-    }
+try {
+    session.close();
+} catch (IOException e) {
+    log.error("Error while closing websocket session " + sessionId, e);
+}
 {% endhighlight %}
 
 Example WebSocketAudit containing reference to WebSocketSession and information about session creation time.
